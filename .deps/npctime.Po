@@ -1,0 +1,495 @@
+npctime.o: npctime.cc config.h npctime.h tqueue.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/vector \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_algobase.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/c++config.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/os_defines.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/cpu_defines.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/functexcept.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/exception_defines.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/cpp_type_traits.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ext/type_traits.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ext/numeric_traits.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_pair.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/move.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/concept_check.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_iterator_base_types.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_iterator_base_funcs.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_iterator.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/debug/debug.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/allocator.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/c++allocator.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ext/new_allocator.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/new \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/exception \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/atomic_lockfree_defines.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_construct.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ext/alloc_traits.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_uninitialized.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_vector.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_bvector.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/range_access.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/vector.tcc \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/list \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_list.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/list.tcc \
+ exult_types.h gamewin.h objs/flags.h imagewin/iwin8.h \
+ imagewin/imagewin.h imagewin/imagebuf.h exult_types.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/string \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stringfwd.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/char_traits.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/postypes.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cwchar \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/wchar.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/_ansi.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/newlib.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/config.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/machine/ieeefp.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/features.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/reent.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/_types.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/machine/_types.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/machine/_default_types.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/lock.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/include/stddef.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/include/stdarg.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/localefwd.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/c++locale.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/clocale \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/locale.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/_ansi.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/iosfwd \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cctype \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/ctype.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/ostream_insert.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/cxxabi_forced.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_function.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/backward/binders.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/basic_string.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ext/atomicity.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/gthr.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/gthr-default.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/atomic_word.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/basic_string.tcc \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/map \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_tree.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_map.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_multimap.h \
+ imagewin/ibuf8.h rect.h exult_constants.h tiles.h shapes/vgafile.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/fstream \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/istream \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ios \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/ios_base.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/locale_classes.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/locale_classes.tcc \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/streambuf \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/streambuf.tcc \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/basic_ios.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/locale_facets.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cwctype \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/wctype.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/ctype_base.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/streambuf_iterator.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/ctype_inline.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/locale_facets.tcc \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/basic_ios.tcc \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ostream \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/ostream.tcc \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/istream.tcc \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/codecvt.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cstdio \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/stdio.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/types.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/machine/types.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/stdio.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/basic_file.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/c++io.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/fstream.tcc \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/iostream \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cassert \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/assert.h \
+ exult_constants.h imagewin/imagebuf.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/utility \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_relops.h \
+ gameclk.h palette.h actors.h objs/contain.h objs/iregobjs.h objs/objs.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/set \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_set.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_multiset.h \
+ objs/flags.h rect.h shapeid.h exult_constants.h shapes/shapevga.h \
+ fnames.h shapes/vgafile.h shapes/shapeinf.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/algorithm \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_algo.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cstdlib \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/stdlib.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/machine/stdlib.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/alloca.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/algorithmfwd.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_heap.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_tempbuf.h \
+ shapes/baseinf.h files/utils.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cstring \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/string.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/cdefs.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/string.h \
+ headers/common_types.h singles.h tqueue.h tiles.h objs/objlist.h \
+ shapes/ready.h shapes/items.h schedule.h singles.h objs/objclient.h \
+ game.h hash_utils.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/unordered_map \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/type_traits \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/functional_hash.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/hashtable.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/hashtable_policy.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/unordered_map.h \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/unordered_set \
+ /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/unordered_set.h
+
+config.h:
+
+npctime.h:
+
+tqueue.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/vector:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_algobase.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/c++config.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/os_defines.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/cpu_defines.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/functexcept.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/exception_defines.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/cpp_type_traits.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ext/type_traits.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ext/numeric_traits.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_pair.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/move.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/concept_check.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_iterator_base_types.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_iterator_base_funcs.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_iterator.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/debug/debug.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/allocator.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/c++allocator.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ext/new_allocator.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/new:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/exception:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/atomic_lockfree_defines.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_construct.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ext/alloc_traits.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_uninitialized.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_vector.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_bvector.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/range_access.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/vector.tcc:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/list:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_list.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/list.tcc:
+
+exult_types.h:
+
+gamewin.h:
+
+objs/flags.h:
+
+imagewin/iwin8.h:
+
+imagewin/imagewin.h:
+
+imagewin/imagebuf.h:
+
+exult_types.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/string:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stringfwd.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/char_traits.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/postypes.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cwchar:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/wchar.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/_ansi.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/newlib.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/config.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/machine/ieeefp.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/features.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/reent.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/_types.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/machine/_types.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/machine/_default_types.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/lock.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/include/stddef.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/include/stdarg.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/localefwd.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/c++locale.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/clocale:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/locale.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/_ansi.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/iosfwd:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cctype:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/ctype.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/ostream_insert.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/cxxabi_forced.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_function.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/backward/binders.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/basic_string.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ext/atomicity.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/gthr.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/gthr-default.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/atomic_word.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/basic_string.tcc:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/map:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_tree.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_map.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_multimap.h:
+
+imagewin/ibuf8.h:
+
+rect.h:
+
+exult_constants.h:
+
+tiles.h:
+
+shapes/vgafile.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/fstream:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/istream:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ios:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/ios_base.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/locale_classes.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/locale_classes.tcc:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/streambuf:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/streambuf.tcc:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/basic_ios.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/locale_facets.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cwctype:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/wctype.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/ctype_base.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/streambuf_iterator.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/ctype_inline.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/locale_facets.tcc:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/basic_ios.tcc:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/ostream:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/ostream.tcc:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/istream.tcc:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/codecvt.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cstdio:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/stdio.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/types.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/machine/types.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/stdio.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/basic_file.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/xenon/32/bits/c++io.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/fstream.tcc:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/iostream:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cassert:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/assert.h:
+
+exult_constants.h:
+
+imagewin/imagebuf.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/utility:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_relops.h:
+
+gameclk.h:
+
+palette.h:
+
+actors.h:
+
+objs/contain.h:
+
+objs/iregobjs.h:
+
+objs/objs.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/set:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_set.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_multiset.h:
+
+objs/flags.h:
+
+rect.h:
+
+shapeid.h:
+
+exult_constants.h:
+
+shapes/shapevga.h:
+
+fnames.h:
+
+shapes/vgafile.h:
+
+shapes/shapeinf.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/algorithm:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_algo.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cstdlib:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/stdlib.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/machine/stdlib.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/alloca.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/algorithmfwd.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_heap.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/bits/stl_tempbuf.h:
+
+shapes/baseinf.h:
+
+files/utils.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/cstring:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/string.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/cdefs.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/sys/string.h:
+
+headers/common_types.h:
+
+singles.h:
+
+tqueue.h:
+
+tiles.h:
+
+objs/objlist.h:
+
+shapes/ready.h:
+
+shapes/items.h:
+
+schedule.h:
+
+singles.h:
+
+objs/objclient.h:
+
+game.h:
+
+hash_utils.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/unordered_map:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/type_traits:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/functional_hash.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/hashtable.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/hashtable_policy.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/unordered_map.h:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/unordered_set:
+
+/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/include/c++/4.7.1/tr1/unordered_set.h:

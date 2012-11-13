@@ -1,0 +1,3 @@
+conv.lo: conv.cc conv.h
+
+conv.h:

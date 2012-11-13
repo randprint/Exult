@@ -1,0 +1,3 @@
+xdrag.o: xdrag.cc config.h
+
+config.h:

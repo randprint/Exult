@@ -1,0 +1,3 @@
+server.lo: server.cc ../config.h
+
+../config.h:

@@ -1,0 +1,3 @@
+glshape.lo: glshape.cc ../config.h
+
+../config.h:

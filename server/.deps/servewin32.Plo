@@ -1,0 +1,3 @@
+servewin32.lo: servewin32.cc ../config.h
+
+../config.h:

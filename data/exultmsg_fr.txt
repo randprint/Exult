@@ -1,0 +1,98 @@
+# These messages are used in the Exult engine, and follow the
+# game-specific ones.
+0x500:Remets cette chaise à sa place !
+0x501:Voleur !!
+0x502:Sale rascal !!
+0x503:C'est pas drôle !
+0x504:Qui a déplacé ma chaise ??
+0x505:On dirait que tu vas bien.
+0x506:Tout va bien ?
+0x507:Un dessert ?
+0x508:Bon appétit !
+0x509:Spécialité de la maison !
+0x50a:Avatar ! Retiens-toi !
+0x50b:Tu vois bien que le lit est occupé !
+0x50c:La personne dans ce lit ne veut pas la société.
+0x50d:Tu ne me perdras pas si facilement !
+0x50e:Ah, te voila !
+0x50f:Trouvé !
+# Intro messages
+0x510:avec l'aide de
+0x511:The Exult Team
+0x512:Actionné par Exult
+# Ending Messages
+0x513:La fin de Ultima VII
+0x514:La fin de Britannia comme vous la connaissez!
+0x515:Non. Vous ne pouvez pas faire cela!
+0x516:Condamnez-vous Avatar!  Condamnez-vous!
+0x517:La Porte Noire est détruite.
+0x518:The Guardian a été arrêté.
+# End1
+0x519:Avatar ! Vous pensez que vous avez gagné ?
+0x51A:Pensez encore ! Vous ne pouvez pas à
+0x51B:laissez Britannia, tandis que je suis libre
+0x51C:pour entrer dans d'autres mondes !
+0x51D:Peut-être votre Earth faible sera
+0x51E:ma PROCHAINE cible !
+# End2
+0x51F:Pendant les mois suivant l'à son apogée
+0x520:bataille à la porte noire, Britannia
+0x521:est placé sur la longue route à la récupération
+0x522:de ses diverses situations difficiles.
+0x523:
+0x524:Sur votre retour vers la Grande-Bretagne,
+0x525:Seigneur British a décrété cela
+0x526:La Fellowship soit proscrite
+0x527:et toutes les branches étaient
+0x528:bientôt détruit.
+# End3
+0x529:La frustration que vous vous sentez à avoir été
+0x52A:est échoué dans Britannia légèrement
+0x52B:allégé par la satisfaction que vous
+0x52C:a résolu les meurtres horribles commis
+0x52D:par La Fellowship et même vengé
+0x52E:la mort du père de Spark.
+# End4
+0x52F:Et bien que vous êtes, à l'heure actuelle,
+0x530:impuissant pour faire n'importe quoi environ
+0x531:La menace finale de The Guardian,
+0x532:des autres petits chevaux de pensée à vous…
+0x533:ce qui est advenu de Batlin, le démon
+0x534:qui est parti ?
+# End5
+0x535:C'est une autre histoire…
+0x536:une qui vous portera
+0x537:à un endroit appelé
+0x538:l'île de serpent…
+#SI intro
+0x539:Lord British's Castle
+0x53A:Dick British's Castle
+0x53B:Dix-huit mois après la destruction
+0x53C:de la Porte Noire et
+0x53D:démontage de la Fellowship
+0x53E:Mon Liège
+0x53F:Yo, homes
+0x540:Tout que nous avons trouvé parmi les affaires
+0x541:de Batlin était ce rouleau enchanté…
+0x542:et une carte montrant le chemin vers
+0x543:un endroit a appelé l'île de serpent.
+0x544:En effet.
+0x545:Mis lui sur la table.
+0x546:Iree. Slap it down there!
+0x547:Reculez!
+0x548:Jump Back!
+0x549:Batlin ! Au cas où l'avatar
+0x54A:détruiraitla Porte Noire vous
+0x54B:suivrez l'humain inconscient
+0x54C:Gwenno à l'île de serpent
+0x54D:Là je décrirai mon plan
+0x54E:pour détruire Britannia!
+0x54F:Batlin! Know that my face is most
+0x550:muppet like!
+0x551:You must go to the Serpent Isle
+0x552:to learn the secret of Acne Medication
+0x553:Soon I and my horde of muppets will
+0x554:destroy Britannia!
+0x555:c'est ma plus mauvaise crainte!
+0x556:Je dois envoyer l'avatar par
+0x557:les piliers à l'île de serpent!

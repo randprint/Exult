@@ -1,0 +1,98 @@
+# These messages are used in the Exult engine, and follow the
+# game-specific ones.
+0x500:Stell den Stuhl zurück!
+0x501:Dieb!!
+0x502:Du Schurke!!
+0x503:Nicht lustig!
+0x504:Wer hat meinen Stuhl bewegt??
+0x505:Du siehst aus, als würde es dir gut gehn.
+0x506:Alles klar?
+0x507:Bereit für das Dessert?
+0x508:Guten Appetit!
+0x509:Spezialität des Hauses!
+0x50a:Avatar!  Benimm dich!
+0x50b:Hast Du bemerkt, daß schon jemand im Bett liegt?
+0x50c:Der Benutzer dieses Bettes wird wohl gerade keinen Wert auf Gesellschaft legen.
+0x50d:So einfach wirst du mich nicht los!
+0x50e:Ah, hier bist du!
+0x50f:Hab dich gefunden!
+# Intromitteilungen
+0x510:mithilfe von
+0x511:Das Jublungs-Team
+0x512:Vorbei gefahren jubeln Sie
+# Endmitteilungen
+0x513:Das Ende von Ultima VII
+0x514:Das Ende von Britannia, wie Sie es kennen!
+0x515:Nein. Sie können das nicht tun! Sie dürfen nicht!
+0x516:Verdammen Sie Sie Avatara!  Verdammen Sie Sie!
+0x517:Das schwarze Tor wird zerstört.
+0x518:The Guardian ist gestoppt worden.
+# End1
+0x519:Avatara! Sie denken, dass Sie gewonnen haben?
+0x51A:Denken Sie wieder! Sie sind zu nicht imstande
+0x51B:lassen Sie Britannia, während ich frei bin
+0x51C:zu andere Welten betreten!
+0x51D:Möglicherweise ist Ihre kümmerliche Erde
+0x51E:mein FOLGENDES Ziel!
+# End2
+0x51F:In den Monaten das sich steigernd folgend
+0x520:Kampf am schwarzen Tor, Britannia
+0x521:wird nach dem weiten Weg zur Wiederaufnahme eingestellt
+0x522:von seinen verschiedenen Lage.
+0x523:
+0x524:Nach Ihrer Rückkehr nach Großbritannien,
+0x525:Lord British verordnete den
+0x526:Das Stipendium wird geächtet
+0x527:und alle Niederlassungen waren
+0x528:bald zerstört.
+# End3
+0x529:Die Frustration, die Sie am Sein sich fühlen
+0x52A:geschwemmt in Britannia ein wenig an
+0x52B:durch die Zufriedenheit die vermindert Sie
+0x52C:löste die grauenhaften begangenen Morde
+0x52D:durch das Stipendium und sogar gerächte
+0x52E:Tod des Vaters des Spark.
+# End4
+0x52F:Und obgleich Sie, im Augenblick sind,
+0x530:hilflos alles ungefähr tun
+0x531:The Guardians abschließende Drohung,
+0x532:eine anderen Gedanke Nags an Ihnen…
+0x533:was aus Batlin wurde, der Unhold
+0x534:wer erhielt weg?
+# End5
+0x535:Die ist eine andere Geschichte…
+0x536:ein das Sie nimmt
+0x537:zu einem Platz genannt
+0x538:Die Schlangen-Insel…
+#SI Intro
+0x539:Lord Britishs Castle
+0x53A:Schloss Dicks Briten
+0x53B:Achtzehn Monate nach der Zerstörung
+0x53C:vom schwarzen Tor und
+0x53D:Abbau des Stipendiums
+0x53E:Mein Lüttich
+0x53F:Yo, Häuser
+0x540:Alle, die wir unter Batlins fanden
+0x541:Eigentum war diese verzauberte Rolle…
+0x542:und eine Karte, welche die Weise zu zeigt
+0x543:ein Platz genannt die Schlangen-Insel.
+0x544:Tatsächlich.
+0x545:Gesetzt ihm auf die Tabelle.
+0x546:Iree. Schlagen Sie es unten dort!
+0x547:Stehen Sie zurück!
+0x548:Springen Sie zurück!
+0x549:Batlin! Im Falle, dass
+0x54A:Avatara zerstört das schwarze Tor
+0x54B:Sie folgen das unabsichtliche
+0x54C:Mensch Gwenno zur Schlangen-Insel
+0x54D:Dort umreiße ich meinen Plan
+0x54E:zu Britannia zerstören!
+0x54F:Batlin! Wissen Sie, dass mein Gesicht die meisten ist
+0x550:Muppet mögen!
+0x551:Sie müssen zur Schlange Isl gehen
+0x552:zu das Geheimnis der Akne-Medikation lernen
+0x553:Bald ich und meine Horde von Muppets werden es tun
+0x554:zerstören Sie Britannia!
+0x555:'Tis meine schlechteste Furcht!
+0x556:Ich muss den Avatara durch senden
+0x557:die Säulen zur Schlangen-Insel!

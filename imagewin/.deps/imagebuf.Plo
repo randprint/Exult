@@ -1,0 +1,5 @@
+imagebuf.lo: imagebuf.cc ../config.h imagebuf.h
+
+../config.h:
+
+imagebuf.h:

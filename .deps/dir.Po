@@ -1,0 +1,5 @@
+dir.o: dir.cc config.h dir.h
+
+config.h:
+
+dir.h:
