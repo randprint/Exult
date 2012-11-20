@@ -110,14 +110,14 @@
 #include <xenos/xenos.h>
 #include <xenos/edram.h>
 #include <xenos/xenos.h>
-#include <threads/threads.h>
 // for gdb
+//#include <threads/threads.h>
 //#include <threads/gdb.h>
 //#include <network/network.h>
 #include <libfat/fat.h>
 #include <usb/usbmain.h>
 #include <diskio/ata.h>
-#include <console/console.h>
+//#include <console/console.h>
 #include <xenon_smc/xenon_smc.h>
 #include <xenon_soc/xenon_power.h>
 #include <sys/iosupport.h>
@@ -325,29 +325,43 @@ int main()
 	TR;
 	int argc=1;
 	char* argv[20]={"uda:/exult/exult.elf"};
+		try
+	{
 	//what the holy fuck is making this function fail
-	xenon_make_it_faster(XENON_SPEED_FULL);
-	TR;
-	xenos_init(VIDEO_MODE_AUTO);
-//	threading_init();
-//	for GDB
-//	network_init();
-//	gdb_init();
-	//console_init();
-	TR;
-    xenon_sound_init();
-	// usb	
-	TR;
-	usb_init();
-	TR;
-	xenon_ata_init();
-	TR;
-	usb_do_poll();
-	TR;
-	fatInitDefault();
-	TR;
-	findDevices();
-	TR;
+		xenon_make_it_faster(XENON_SPEED_FULL);
+		TR;
+		xenos_init(VIDEO_MODE_AUTO);
+	//	threading_init();
+	//	for GDB
+	//	network_init();
+	//	gdb_init();
+		//console_init();
+		TR;
+		xenon_sound_init();
+		// usb	
+		TR;
+		usb_init();
+		TR;
+		xenon_ata_init();
+		TR;
+		usb_do_poll();
+		TR;
+		fatInitDefault();
+		TR;
+		findDevices();
+		TR;
+	}
+	catch( const exult_exception & e )
+	{
+		cerr << "============================" << endl <<
+			"An exception occured: " << endl << 
+			e.what() << endl << 
+			"errno: " << e.get_errno() << endl;
+		if( e.get_errno() != 0)
+			perror("Error Description");
+		cerr << "============================" << endl;
+	}
+
 #endif
 #endif
 	

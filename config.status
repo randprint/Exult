@@ -580,7 +580,7 @@ FGREP='/bin/grep -F'
 LD='/usr/local/xenon/xenon/bin/ld'
 NM='/usr/local/xenon/bin/xenon-nm -B'
 LN_S='ln -s'
-max_cmd_len='805306365'
+max_cmd_len='1572864'
 ac_objext='o'
 exeext=''
 lt_unset='unset'
@@ -599,7 +599,7 @@ old_postinstall_cmds='chmod 644 $oldlib~$RANLIB $oldlib'
 old_postuninstall_cmds=''
 old_archive_cmds='$AR $AR_FLAGS $oldlib$oldobjs~$RANLIB $oldlib'
 CC='xenon-gcc'
-CFLAGS='-mcpu=cell -mtune=cell -m32 -fno-pic -mpowerpc64 /usr/local/xenon/usr/lib/libxenon.a -L/usr/local/xenon/xenon/lib/32/ -T/usr/local/xenon/app.lds -u read -u _start -u exc_base -L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include -Wall'
+CFLAGS='-DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-maltivec -mabi=altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -Wall'
 compiler='xenon-g++'
 GCC='yes'
 lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p'\'''
@@ -725,15 +725,15 @@ include_expsyms_CXX=''
 prelink_cmds_CXX=''
 file_list_spec_CXX=''
 hardcode_action_CXX='immediate'
-compiler_lib_search_dirs_CXX='/usr/local/xenon/xenon/lib/32/ /usr/local/xenon/usr/lib /usr/local/xenon/lib/gcc/xenon/4.7.1/32 /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib/../lib /usr/local/xenon/lib/gcc/xenon/4.7.1 /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib'
+compiler_lib_search_dirs_CXX='/usr/local/xenon/xenon/lib/32 /usr/local/xenon/usr/lib /usr/local/xenon/lib/gcc/xenon/4.7.1/32 /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib/../lib /usr/local/xenon/lib/gcc/xenon/4.7.1 /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib'
 predep_objects_CXX='/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib/../lib/crti.o /usr/local/xenon/lib/gcc/xenon/4.7.1/32/crtbeginS.o'
 postdep_objects_CXX='/usr/local/xenon/lib/gcc/xenon/4.7.1/32/crtendS.o /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib/../lib/crtn.o'
 predeps_CXX=''
 postdeps_CXX='-lstdc++ -lm -lgcc -lc -lgcc'
-compiler_lib_search_path_CXX='-L/usr/local/xenon/xenon/lib/32/ -L/usr/local/xenon/usr/lib -L/usr/local/xenon/lib/gcc/xenon/4.7.1/32 -L/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib/../lib -L/usr/local/xenon/lib/gcc/xenon/4.7.1 -L/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib'
+compiler_lib_search_path_CXX='-L/usr/local/xenon/xenon/lib/32 -L/usr/local/xenon/usr/lib -L/usr/local/xenon/lib/gcc/xenon/4.7.1/32 -L/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib/../lib -L/usr/local/xenon/lib/gcc/xenon/4.7.1 -L/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib'
 
 LTCC='xenon-gcc'
-LTCFLAGS='-mcpu=cell -mtune=cell -m32 -fno-pic -mpowerpc64 /usr/local/xenon/usr/lib/libxenon.a -L/usr/local/xenon/xenon/lib/32/ -T/usr/local/xenon/app.lds -u read -u _start -u exc_base -L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include'
+LTCFLAGS='-DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-maltivec -mabi=altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall'
 compiler='xenon-gcc'
 
 # Quote evaled strings.
@@ -983,9 +983,10 @@ S["am__fastdepCXX_FALSE"]="#"
 S["am__fastdepCXX_TRUE"]=""
 S["CXXDEPMODE"]="depmode=gcc3"
 S["ac_ct_CXX"]=""
-S["CXXFLAGS"]=" -DUSE_MT32EMU_MIDI -UUSE_TIMIDITY_MIDI -DXENON -DBYTE_ORDER=1 -DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -Wall -fsigned-char -mcpu=cell -mtune=cell -m32 -fno"\
-"-pic /usr/local/xenon/usr/lib/libxenon.a -L/usr/local/xenon/xenon/lib/32/ -T/usr/local/xenon/app.lds -u read -u _start -u exc_base -L/usr/local/xeno"\
-"n/usr/lib -I/usr/local/xenon/usr/include"
+S["CXXFLAGS"]=" -DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-maltivec -mabi=a"\
+"ltivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include"\
+" 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -DUSE"\
+"_MT32EMU_MIDI -UUSE_TIMIDITY_MIDI"
 S["CXX"]="xenon-g++"
 S["LEXYACC_FALSE"]="#"
 S["LEXYACC_TRUE"]=""
@@ -1007,10 +1008,16 @@ S["DEPDIR"]=".deps"
 S["OBJEXT"]="o"
 S["EXEEXT"]=""
 S["ac_ct_CC"]=""
-S["CPPFLAGS"]=""
-S["LDFLAGS"]="-m32 -L/usr/local/xenon/xenon/lib/32/ -T/usr/local/xenon/app.lds -L/usr/local/xenon/usr/lib"
-S["CFLAGS"]="-mcpu=cell -mtune=cell -m32 -fno-pic -mpowerpc64 /usr/local/xenon/usr/lib/libxenon.a -L/usr/local/xenon/xenon/lib/32/ -T/usr/local/xenon/app.lds -u "\
-"read -u _start -u exc_base -L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include -Wall"
+S["CPPFLAGS"]="-DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-maltivec -mabi=al"\
+"tivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include "\
+"		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -DUSE_"\
+"MT32EMU_MIDI -UUSE_TIMIDITY_MIDI"
+S["LDFLAGS"]="-DLIBXENON -DXENON -m32 -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-maltivec -mabi=altiv"\
+"ec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		/"\
+"usr/local/xenon/usr/lib/libxenon.a -u read -u _start -u exc_base 		-n -T /usr/local/xenon/app.lds"
+S["CFLAGS"]="-DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-maltivec -mabi=al"\
+"tivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include "\
+"		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -Wall"
 S["CC"]="xenon-gcc"
 S["MACOSX_FALSE"]=""
 S["MACOSX_TRUE"]="#"

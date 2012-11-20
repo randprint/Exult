@@ -3775,8 +3775,22 @@ $as_echo "Mac OS X" >&6; }
 				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: Unknown (Unknown)" >&5
 $as_echo "Unknown (Unknown)" >&6; }
 		SYSLIBS="-lfat -lbz2 -lz -lxenon -lglob -lc -lm -lstdc++"
-		CXXFLAGS="$CXXFLAGS -DUSE_MT32EMU_MIDI -UUSE_TIMIDITY_MIDI -DXENON -DBYTE_ORDER=1 -DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -Wall -fsigned-char -mcpu=cell -mtune=cell -m32 -fno-pic /usr/local/xenon/usr/lib/libxenon.a -L/usr/local/xenon/xenon/lib/32/ -T/usr/local/xenon/app.lds -u read -u _start -u exc_base -L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include"
-		LDFLAGS="-m32 -L/usr/local/xenon/xenon/lib/32/ -T/usr/local/xenon/app.lds -L/usr/local/xenon/usr/lib"
+		CFLAGS="-DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell \
+		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 \
+		-maltivec -mabi=altivec -fno-pic -mpowerpc64 \
+		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 \
+		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include \
+		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 \
+		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall"
+        CPPFLAGS="$CFLAGS -DUSE_MT32EMU_MIDI -UUSE_TIMIDITY_MIDI"
+		CXXFLAGS="$CXXFLAGS $CPPFLAGS"
+		LDFLAGS="-DLIBXENON -DXENON -m32 -O2 -mcpu=cell -mtune=cell \
+		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 \
+		-maltivec -mabi=altivec -fno-pic -mpowerpc64 \
+		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 \
+		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include \
+		/usr/local/xenon/usr/lib/libxenon.a -u read -u _start -u exc_base \
+		-n -T /usr/local/xenon/app.lds"
 		enable_tools="no"
 		enable_timidity="no"
 		enable_mt32emu="yes"

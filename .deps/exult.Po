@@ -194,13 +194,11 @@ exult.o: exult.cc config.h \
  /usr/local/xenon/usr/include/xenos/xe.h \
  /usr/local/xenon/usr/include/xenos/xenos.h \
  /usr/local/xenon/usr/include/xenos/edram.h \
- /usr/local/xenon/usr/include/threads/threads.h \
  /usr/local/xenon/usr/include/libfat/fat.h \
  /usr/local/xenon/usr/include/diskio/disc_io.h \
  /usr/local/xenon/usr/include/usb/usbmain.h \
  /usr/local/xenon/usr/include/diskio/ata.h \
  /usr/local/xenon/usr/include/diskio/disc_io.h \
- /usr/local/xenon/usr/include/console/console.h \
  /usr/local/xenon/usr/include/xenon_smc/xenon_smc.h \
  /usr/local/xenon/usr/include/xenon_soc/xenon_power.h \
  /usr/local/xenon/usr/include/sys/iosupport.h \
@@ -758,8 +756,6 @@ imagewin/imagewin.h:
 
 /usr/local/xenon/usr/include/xenos/edram.h:
 
-/usr/local/xenon/usr/include/threads/threads.h:
-
 /usr/local/xenon/usr/include/libfat/fat.h:
 
 /usr/local/xenon/usr/include/diskio/disc_io.h:
@@ -769,8 +765,6 @@ imagewin/imagewin.h:
 /usr/local/xenon/usr/include/diskio/ata.h:
 
 /usr/local/xenon/usr/include/diskio/disc_io.h:
-
-/usr/local/xenon/usr/include/console/console.h:
 
 /usr/local/xenon/usr/include/xenon_smc/xenon_smc.h:
 

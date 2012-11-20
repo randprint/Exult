@@ -86,7 +86,7 @@ NM="/usr/local/xenon/bin/xenon-nm -B"
 LN_S="ln -s"
 
 # What is the maximum length of a command?
-max_cmd_len=805306365
+max_cmd_len=1572864
 
 # Object file suffix (normally "o").
 objext=o
@@ -132,7 +132,7 @@ old_postuninstall_cmds=""
 LTCC="xenon-gcc"
 
 # LTCC compiler flags.
-LTCFLAGS="-mcpu=cell -mtune=cell -m32 -fno-pic -mpowerpc64 /usr/local/xenon/usr/lib/libxenon.a -L/usr/local/xenon/xenon/lib/32/ -T/usr/local/xenon/app.lds -u read -u _start -u exc_base -L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include -Wall"
+LTCFLAGS="-DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-maltivec -mabi=altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -Wall"
 
 # Take the output of nm and produce a listing of raw symbols and C names.
 global_symbol_pipe="sed -n -e 's/^.*[	 ]\\([ABCDGIRSTW][ABCDGIRSTW]*\\)[	 ][	 ]*\\([_A-Za-z][_A-Za-z0-9]*\\)\$/\\1 \\2 \\2/p'"
@@ -9044,7 +9044,7 @@ file_list_spec=""
 hardcode_action=immediate
 
 # The directories searched by this compiler when creating a shared library.
-compiler_lib_search_dirs="/usr/local/xenon/xenon/lib/32/ /usr/local/xenon/usr/lib /usr/local/xenon/lib/gcc/xenon/4.7.1/32 /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib/../lib /usr/local/xenon/lib/gcc/xenon/4.7.1 /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib"
+compiler_lib_search_dirs="/usr/local/xenon/xenon/lib/32 /usr/local/xenon/usr/lib /usr/local/xenon/lib/gcc/xenon/4.7.1/32 /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib/../lib /usr/local/xenon/lib/gcc/xenon/4.7.1 /usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib"
 
 # Dependencies to place before and after the objects being linked to
 # create a shared library.
@@ -9055,6 +9055,6 @@ postdeps="-lstdc++ -lm -lgcc -lc -lgcc"
 
 # The library search path used internally by the compiler when linking
 # a shared library.
-compiler_lib_search_path="-L/usr/local/xenon/xenon/lib/32/ -L/usr/local/xenon/usr/lib -L/usr/local/xenon/lib/gcc/xenon/4.7.1/32 -L/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib/../lib -L/usr/local/xenon/lib/gcc/xenon/4.7.1 -L/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib"
+compiler_lib_search_path="-L/usr/local/xenon/xenon/lib/32 -L/usr/local/xenon/usr/lib -L/usr/local/xenon/lib/gcc/xenon/4.7.1/32 -L/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib/../lib -L/usr/local/xenon/lib/gcc/xenon/4.7.1 -L/usr/local/xenon/lib/gcc/xenon/4.7.1/../../../../xenon/lib"
 
 # ### END LIBTOOL TAG CONFIG: CXX
