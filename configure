@@ -853,6 +853,8 @@ CPPFLAGS
 LDFLAGS
 CFLAGS
 CC
+XENON_FALSE
+XENON_TRUE
 MACOSX_FALSE
 MACOSX_TRUE
 am__untar
@@ -3772,12 +3774,16 @@ $as_echo "Mac OS X" >&6; }
 		ARCH=macosx
 		;;
 	none*)
-				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: Unknown (Unknown)" >&5
-$as_echo "Unknown (Unknown)" >&6; }
+
+$as_echo "#define XENON 1" >>confdefs.h
+
+		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: Xenon (Unknown)" >&5
+$as_echo "Xenon (Unknown)" >&6; }
+		ARCH=xenon
 		SYSLIBS="-lfat -lbz2 -lz -lxenon -lglob -lc -lm -lstdc++"
 		CFLAGS="-DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell \
 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 \
-		-maltivec -mabi=altivec -fno-pic -mpowerpc64 \
+		-mno-altivec -mabi=no-altivec -fno-pic -mpowerpc64 \
 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 \
 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include \
 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 \
@@ -3786,7 +3792,7 @@ $as_echo "Unknown (Unknown)" >&6; }
 		CXXFLAGS="$CXXFLAGS $CPPFLAGS"
 		LDFLAGS="-DLIBXENON -DXENON -m32 -O2 -mcpu=cell -mtune=cell \
 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 \
-		-maltivec -mabi=altivec -fno-pic -mpowerpc64 \
+		-mno-altivec -mabi=no-altivec -fno-pic -mpowerpc64 \
 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 \
 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include \
 		/usr/local/xenon/usr/lib/libxenon.a -u read -u _start -u exc_base \
@@ -3815,6 +3821,15 @@ esac
 else
   MACOSX_TRUE='#'
   MACOSX_FALSE=
+fi
+
+
+ if test x$ARCH = xenon; then
+  XENON_TRUE=
+  XENON_FALSE='#'
+else
+  XENON_TRUE='#'
+  XENON_FALSE=
 fi
 
 
@@ -6614,13 +6629,13 @@ if test "${lt_cv_nm_interface+set}" = set; then :
 else
   lt_cv_nm_interface="BSD nm"
   echo "int some_variable = 0;" > conftest.$ac_ext
-  (eval echo "\"\$as_me:6617: $ac_compile\"" >&5)
+  (eval echo "\"\$as_me:6632: $ac_compile\"" >&5)
   (eval "$ac_compile" 2>conftest.err)
   cat conftest.err >&5
-  (eval echo "\"\$as_me:6620: $NM \\\"conftest.$ac_objext\\\"\"" >&5)
+  (eval echo "\"\$as_me:6635: $NM \\\"conftest.$ac_objext\\\"\"" >&5)
   (eval "$NM \"conftest.$ac_objext\"" 2>conftest.err > conftest.out)
   cat conftest.err >&5
-  (eval echo "\"\$as_me:6623: output\"" >&5)
+  (eval echo "\"\$as_me:6638: output\"" >&5)
   cat conftest.out >&5
   if $GREP 'External.*some_variable' conftest.out > /dev/null; then
     lt_cv_nm_interface="MS dumpbin"
@@ -7825,7 +7840,7 @@ ia64-*-hpux*)
   ;;
 *-*-irix6*)
   # Find out which ABI we are using.
-  echo '#line 7828 "configure"' > conftest.$ac_ext
+  echo '#line 7843 "configure"' > conftest.$ac_ext
   if { { eval echo "\"\$as_me\":${as_lineno-$LINENO}: \"$ac_compile\""; } >&5
   (eval $ac_compile) 2>&5
   ac_status=$?
@@ -9710,11 +9725,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:9713: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:9728: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>conftest.err)
    ac_status=$?
    cat conftest.err >&5
-   echo "$as_me:9717: \$? = $ac_status" >&5
+   echo "$as_me:9732: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s "$ac_outfile"; then
      # The compiler can only warn and ignore the option if not recognized
      # So say no if there are warnings other than the usual output.
@@ -10049,11 +10064,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:10052: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:10067: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>conftest.err)
    ac_status=$?
    cat conftest.err >&5
-   echo "$as_me:10056: \$? = $ac_status" >&5
+   echo "$as_me:10071: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s "$ac_outfile"; then
      # The compiler can only warn and ignore the option if not recognized
      # So say no if there are warnings other than the usual output.
@@ -10154,11 +10169,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:10157: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:10172: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>out/conftest.err)
    ac_status=$?
    cat out/conftest.err >&5
-   echo "$as_me:10161: \$? = $ac_status" >&5
+   echo "$as_me:10176: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s out/conftest2.$ac_objext
    then
      # The compiler can only warn and ignore the option if not recognized
@@ -10209,11 +10224,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:10212: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:10227: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>out/conftest.err)
    ac_status=$?
    cat out/conftest.err >&5
-   echo "$as_me:10216: \$? = $ac_status" >&5
+   echo "$as_me:10231: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s out/conftest2.$ac_objext
    then
      # The compiler can only warn and ignore the option if not recognized
@@ -12593,7 +12608,7 @@ else
   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
   lt_status=$lt_dlunknown
   cat > conftest.$ac_ext <<_LT_EOF
-#line 12596 "configure"
+#line 12611 "configure"
 #include "confdefs.h"
 
 #if HAVE_DLFCN_H
@@ -12689,7 +12704,7 @@ else
   lt_dlunknown=0; lt_dlno_uscore=1; lt_dlneed_uscore=2
   lt_status=$lt_dlunknown
   cat > conftest.$ac_ext <<_LT_EOF
-#line 12692 "configure"
+#line 12707 "configure"
 #include "confdefs.h"
 
 #if HAVE_DLFCN_H
@@ -14645,11 +14660,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:14648: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:14663: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>conftest.err)
    ac_status=$?
    cat conftest.err >&5
-   echo "$as_me:14652: \$? = $ac_status" >&5
+   echo "$as_me:14667: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s "$ac_outfile"; then
      # The compiler can only warn and ignore the option if not recognized
      # So say no if there are warnings other than the usual output.
@@ -14744,11 +14759,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:14747: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:14762: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>out/conftest.err)
    ac_status=$?
    cat out/conftest.err >&5
-   echo "$as_me:14751: \$? = $ac_status" >&5
+   echo "$as_me:14766: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s out/conftest2.$ac_objext
    then
      # The compiler can only warn and ignore the option if not recognized
@@ -14796,11 +14811,11 @@ else
    -e 's:.*FLAGS}\{0,1\} :&$lt_compiler_flag :; t' \
    -e 's: [^ ]*conftest\.: $lt_compiler_flag&:; t' \
    -e 's:$: $lt_compiler_flag:'`
-   (eval echo "\"\$as_me:14799: $lt_compile\"" >&5)
+   (eval echo "\"\$as_me:14814: $lt_compile\"" >&5)
    (eval "$lt_compile" 2>out/conftest.err)
    ac_status=$?
    cat out/conftest.err >&5
-   echo "$as_me:14803: \$? = $ac_status" >&5
+   echo "$as_me:14818: \$? = $ac_status" >&5
    if (exit $ac_status) && test -s out/conftest2.$ac_objext
    then
      # The compiler can only warn and ignore the option if not recognized
@@ -19015,6 +19030,10 @@ fi
 
 if test -z "${MACOSX_TRUE}" && test -z "${MACOSX_FALSE}"; then
   as_fn_error $? "conditional \"MACOSX\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${XENON_TRUE}" && test -z "${XENON_FALSE}"; then
+  as_fn_error $? "conditional \"XENON\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${AMDEP_TRUE}" && test -z "${AMDEP_FALSE}"; then

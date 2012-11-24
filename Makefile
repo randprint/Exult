@@ -155,13 +155,13 @@ AUTOMAKE = ${SHELL} /home/pos/Desktop/exult/missing --run automake-1.11
 AWK = gawk
 CC = xenon-gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = -DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-maltivec -mabi=altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -Wall
+CFLAGS = -DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-mno-altivec -mabi=no-altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -Wall
 CPP = xenon-gcc -E
-CPPFLAGS = -DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-maltivec -mabi=altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -DUSE_MT32EMU_MIDI -UUSE_TIMIDITY_MIDI
+CPPFLAGS = -DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-mno-altivec -mabi=no-altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -DUSE_MT32EMU_MIDI -UUSE_TIMIDITY_MIDI
 CXX = xenon-g++
 CXXCPP = xenon-g++ -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS =  -DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-maltivec -mabi=altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -DUSE_MT32EMU_MIDI -UUSE_TIMIDITY_MIDI
+CXXFLAGS =  -DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-mno-altivec -mabi=no-altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -DUSE_MT32EMU_MIDI -UUSE_TIMIDITY_MIDI
 CYGPATH_W = echo
 DEBUG_FLAGS = -O2 -Wno-long-long
 DEFS = -DHAVE_CONFIG_H
@@ -195,7 +195,7 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/local/xenon/xenon/bin/ld
-LDFLAGS = -DLIBXENON -DXENON -m32 -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-maltivec -mabi=altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		/usr/local/xenon/usr/lib/libxenon.a -u read -u _start -u exc_base 		-n -T /usr/local/xenon/app.lds
+LDFLAGS = -DLIBXENON -DXENON -m32 -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-mno-altivec -mabi=no-altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		/usr/local/xenon/usr/lib/libxenon.a -u read -u _start -u exc_base 		-n -T /usr/local/xenon/app.lds
 LEX = flex
 LEXLIB = 
 LEX_OUTPUT_ROOT = lex.yy
@@ -321,6 +321,10 @@ CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(DEBUG_FLAGS) $(CXXFLA
 SUBDIRS = files conf data shapes imagewin flic pathfinder \
 	usecode audio gumps objs server gamemgr \
 	mapedit desktop docs $(MODSDIR)
+
+#SUBDIRS = files conf data shapes imagewin flic pathfinder \
+#	usecode audio gumps objs server gamemgr \
+#	mapedit desktop docs $(MODSDIR)
 
 exult_SOURCES = \
 	actions.cc	\
@@ -1152,6 +1156,7 @@ uninstall-am: uninstall-binPROGRAMS
 	mostlyclean-libtool pdf pdf-am ps ps-am tags tags-recursive \
 	uninstall uninstall-am uninstall-binPROGRAMS
 
+#include /usr/local/xenon/rules
 
 win32/exultico.o: $(srcdir)/win32/exultico.rc $(srcdir)/win32/exult.ico
 	-mkdir win32

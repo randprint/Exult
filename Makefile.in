@@ -318,9 +318,13 @@ INCLUDES = -I$(srcdir) -I$(srcdir)/headers -I$(srcdir)/imagewin -I$(srcdir)/shap
 
 CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(DEBUG_FLAGS) $(CXXFLAGS) $(LDFLAGS) -o $(EXE_TARGET)
 @BUILD_MODS_TRUE@MODSDIR = content
-SUBDIRS = files conf data shapes imagewin flic pathfinder \
-	usecode tools audio gumps objs server gamemgr \
-	mapedit desktop docs $(MODSDIR)
+@XENON_FALSE@SUBDIRS = files conf data shapes imagewin flic pathfinder \
+@XENON_FALSE@	usecode tools audio gumps objs server gamemgr \
+@XENON_FALSE@	mapedit desktop docs $(MODSDIR)
+
+@XENON_TRUE@SUBDIRS = files conf data shapes imagewin flic pathfinder \
+@XENON_TRUE@	usecode audio gumps objs server gamemgr \
+@XENON_TRUE@	mapedit desktop docs $(MODSDIR)
 
 exult_SOURCES = \
 	actions.cc	\
@@ -1152,6 +1156,7 @@ uninstall-am: uninstall-binPROGRAMS
 	mostlyclean-libtool pdf pdf-am ps ps-am tags tags-recursive \
 	uninstall uninstall-am uninstall-binPROGRAMS
 
+@XENON_TRUE@include /usr/local/xenon/rules
 
 win32/exultico.o: $(srcdir)/win32/exultico.rc $(srcdir)/win32/exult.ico
 	-mkdir win32

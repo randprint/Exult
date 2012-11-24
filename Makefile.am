@@ -1,3 +1,7 @@
+if XENON
+include /usr/local/xenon/rules
+endif
+
 INCLUDES = -I$(srcdir) -I$(srcdir)/headers -I$(srcdir)/imagewin -I$(srcdir)/shapes \
 	-I$(srcdir)/server -I$(srcdir)/data -I$(srcdir)/gamemgr \
 	-I$(srcdir)/objs -I$(srcdir)/conf -I$(srcdir)/files -I$(srcdir)/gumps \
@@ -12,9 +16,15 @@ if BUILD_MODS
 MODSDIR=content
 endif
 
+if XENON
+SUBDIRS =  files conf data shapes imagewin flic pathfinder \
+	usecode audio gumps objs server gamemgr \
+	mapedit desktop docs $(MODSDIR)
+else
 SUBDIRS =  files conf data shapes imagewin flic pathfinder \
 	usecode tools audio gumps objs server gamemgr \
 	mapedit desktop docs $(MODSDIR)
+endif
 
 bin_PROGRAMS = exult
 

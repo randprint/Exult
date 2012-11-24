@@ -165,11 +165,13 @@ case "$host_os" in
 		;;
 	none*)
 		dnl WINDOWING_SYSTEM="-DWIN32"
-		AC_MSG_RESULT([Unknown (Unknown)])
+		AC_DEFINE(XENON, 1, [Using Xenon])
+		AC_MSG_RESULT([Xenon (Unknown)])
+		ARCH=xenon
 		SYSLIBS="-lfat -lbz2 -lz -lxenon -lglob -lc -lm -lstdc++"
 		CFLAGS="-DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell \
 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 \
-		-maltivec -mabi=altivec -fno-pic -mpowerpc64 \
+		-mno-altivec -mabi=no-altivec -fno-pic -mpowerpc64 \
 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 \
 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include \
 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 \
@@ -178,7 +180,7 @@ case "$host_os" in
 		CXXFLAGS="$CXXFLAGS $CPPFLAGS"
 		LDFLAGS="-DLIBXENON -DXENON -m32 -O2 -mcpu=cell -mtune=cell \
 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 \
-		-maltivec -mabi=altivec -fno-pic -mpowerpc64 \
+		-mno-altivec -mabi=no-altivec -fno-pic -mpowerpc64 \
 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 \
 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include \
 		/usr/local/xenon/usr/lib/libxenon.a -u read -u _start -u exc_base \
@@ -201,6 +203,8 @@ case "$host_os" in
 esac
 
 AM_CONDITIONAL(MACOSX, test x$ARCH = xmacosx)
+
+AM_CONDITIONAL(XENON, test x$ARCH = xenon)
 
 # ---------------------------------------------------------------------
 # Compilers and other tools

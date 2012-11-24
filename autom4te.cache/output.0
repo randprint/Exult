@@ -853,6 +853,8 @@ CPPFLAGS
 LDFLAGS
 CFLAGS
 CC
+XENON_FALSE
+XENON_TRUE
 MACOSX_FALSE
 MACOSX_TRUE
 am__untar
@@ -3772,12 +3774,16 @@ $as_echo "Mac OS X" >&6; }
 		ARCH=macosx
 		;;
 	none*)
-				{ $as_echo "$as_me:${as_lineno-$LINENO}: result: Unknown (Unknown)" >&5
-$as_echo "Unknown (Unknown)" >&6; }
+				
+$as_echo "@%:@define XENON 1" >>confdefs.h
+
+		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: Xenon (Unknown)" >&5
+$as_echo "Xenon (Unknown)" >&6; }
+		ARCH=xenon
 		SYSLIBS="-lfat -lbz2 -lz -lxenon -lglob -lc -lm -lstdc++"
 		CFLAGS="-DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell \
 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 \
-		-maltivec -mabi=altivec -fno-pic -mpowerpc64 \
+		-mno-altivec -mabi=no-altivec -fno-pic -mpowerpc64 \
 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 \
 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include \
 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 \
@@ -3786,7 +3792,7 @@ $as_echo "Unknown (Unknown)" >&6; }
 		CXXFLAGS="$CXXFLAGS $CPPFLAGS"
 		LDFLAGS="-DLIBXENON -DXENON -m32 -O2 -mcpu=cell -mtune=cell \
 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 \
-		-maltivec -mabi=altivec -fno-pic -mpowerpc64 \
+		-mno-altivec -mabi=no-altivec -fno-pic -mpowerpc64 \
 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 \
 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include \
 		/usr/local/xenon/usr/lib/libxenon.a -u read -u _start -u exc_base \
@@ -3815,6 +3821,15 @@ esac
 else
   MACOSX_TRUE='#'
   MACOSX_FALSE=
+fi
+
+
+ if test x$ARCH = xenon; then
+  XENON_TRUE=
+  XENON_FALSE='#'
+else
+  XENON_TRUE='#'
+  XENON_FALSE=
 fi
 
 
@@ -19019,6 +19034,10 @@ fi
 
 if test -z "${MACOSX_TRUE}" && test -z "${MACOSX_FALSE}"; then
   as_fn_error $? "conditional \"MACOSX\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5 
+fi
+if test -z "${XENON_TRUE}" && test -z "${XENON_FALSE}"; then
+  as_fn_error $? "conditional \"XENON\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5 
 fi
 if test -z "${AMDEP_TRUE}" && test -z "${AMDEP_FALSE}"; then

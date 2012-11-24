@@ -277,6 +277,9 @@
 /* Version Number Minor */
 #undef VER_MINOR
 
+/* Using Xenon */
+#undef XENON
+
 /* X11 (needed by Exult Studio support in Mac OS X) */
 #undef XWIN
 

@@ -86,7 +86,7 @@ NM="/usr/local/xenon/bin/xenon-nm -B"
 LN_S="ln -s"
 
 # What is the maximum length of a command?
-max_cmd_len=1572864
+max_cmd_len=805306365
 
 # Object file suffix (normally "o").
 objext=o
@@ -132,7 +132,7 @@ old_postuninstall_cmds=""
 LTCC="xenon-gcc"
 
 # LTCC compiler flags.
-LTCFLAGS="-DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-maltivec -mabi=altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -Wall"
+LTCFLAGS="-DLIBXENON -DXENON -m32 -g -O2 -mcpu=cell -mtune=cell 		-fno-tree-vectorize -fno-tree-slp-vectorize -ftree-vectorizer-verbose=1 		-mno-altivec -mabi=no-altivec -fno-pic -mpowerpc64 		-mhard-float -fsigned-char -L/usr/local/xenon/xenon/lib/32 		-L/usr/local/xenon/usr/lib -I/usr/local/xenon/usr/include 		-u read -u _start -u exc_base -DSAFE_CONSOLE_STREAMS -DBYTE_ORDER=1 		-DBIG_ENDIAN=1 -DLITTLE_ENDIAN=0 -n -T /usr/local/xenon/app.lds -Wall -Wall"
 
 # Take the output of nm and produce a listing of raw symbols and C names.
 global_symbol_pipe="sed -n -e 's/^.*[	 ]\\([ABCDGIRSTW][ABCDGIRSTW]*\\)[	 ][	 ]*\\([_A-Za-z][_A-Za-z0-9]*\\)\$/\\1 \\2 \\2/p'"
